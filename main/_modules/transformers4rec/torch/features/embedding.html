@@ -1,69 +1,45 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>transformers4rec.torch.features.embedding &mdash; Transformers4Rec  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>transformers4rec.torch.features.embedding &mdash; Transformers4Rec  documentation</title><link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    <link rel="canonical" href="https://nvidia-merlin.github.io/Transformers4Rec/main/_modules/transformers4rec/torch/features/embedding.html" />
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
         <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-
-    
+        <script >let toggleHintShow = 'Click to show';</script>
+        <script >let toggleHintHide = 'Click to hide';</script>
+        <script >let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
+  <div class="banner">
+    <p class="banner">
+      Beginning in January 2023, versions for all NVIDIA Merlin projects
+      will change from semantic versioning like <code>4.0</code>
+      to calendar versioning like <code>23.01</code>.</p>
+  </div>
 
-   
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../../../index.html" class="icon icon-home"> Transformers4Rec
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -71,97 +47,44 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Transformers4Rec | Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#highlights">Highlights</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#quick-tour">Quick tour</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#use-cases">Use cases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../README.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../why_transformers4rec.html">Why Transformers4Rec?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../model_definition.html">Model Architectures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../training_eval.html">Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">End-to-end pipeline with NVIDIA Merlin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">End-to-End Pipeline with Hugging Face Transformers and NVIDIA Merlin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multi_gpu_train.html">Multi-GPU data-parallel training using the <code class="docutils literal notranslate"><span class="pre">Trainer</span></code> class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/index.html">Example Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">API Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../resources.html">Additional Resources</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../../index.html">Transformers4Rec</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-        
       <li>transformers4rec.torch.features.embedding</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for transformers4rec.torch.features.embedding</h1><div class="highlight"><pre>
 <span></span><span class="c1">#</span>
 <span class="c1"># Copyright (c) 2021, NVIDIA CORPORATION.</span>
@@ -180,12 +103,13 @@
 <span class="c1">#</span>
 
 <span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Callable</span><span class="p">,</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Text</span><span class="p">,</span> <span class="n">Union</span>
 
 <span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">from</span> <span class="nn">merlin.models.utils.doc_utils</span> <span class="kn">import</span> <span class="n">docstring_parameter</span>
+<span class="kn">from</span> <span class="nn">merlin.schema</span> <span class="kn">import</span> <span class="n">Tags</span><span class="p">,</span> <span class="n">TagsType</span>
 
-<span class="kn">from</span> <span class="nn">merlin_standard_lib</span> <span class="kn">import</span> <span class="n">Schema</span><span class="p">,</span> <span class="n">Tag</span>
-<span class="kn">from</span> <span class="nn">merlin_standard_lib.utils.doc_utils</span> <span class="kn">import</span> <span class="n">docstring_parameter</span>
+<span class="kn">from</span> <span class="nn">merlin_standard_lib</span> <span class="kn">import</span> <span class="n">Schema</span><span class="p">,</span> <span class="n">categorical_cardinalities</span>
 <span class="kn">from</span> <span class="nn">merlin_standard_lib.utils.embedding_utils</span> <span class="kn">import</span> <span class="n">get_embedding_sizes_from_schema</span>
 
 <span class="kn">from</span> <span class="nn">..tabular.base</span> <span class="kn">import</span> <span class="p">(</span>
@@ -211,7 +135,7 @@
     <span class="n">embedding_features_parameters</span><span class="o">=</span><span class="n">EMBEDDING_FEATURES_PARAMS_DOCSTRING</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="k">class</span> <span class="nc">EmbeddingFeatures</span><span class="p">(</span><span class="n">InputBlock</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Input block for embedding-lookups for categorical features.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Input block for embedding-lookups for categorical features.</span>
 
 <span class="sd">    For multi-hot features, the embeddings will be aggregated into a single tensor using the mean.</span>
 
@@ -272,7 +196,7 @@
         <span class="n">infer_embedding_sizes_multiplier</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">,</span>
         <span class="n">embeddings_initializers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="kc">None</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">combiner</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
-        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Tag</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TagsType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">item_id</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">automatic_build</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">max_sequence_length</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -281,7 +205,7 @@
         <span class="n">post</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;EmbeddingFeatures&quot;</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;Instantitates ``EmbeddingFeatures`` from a ``DatasetSchema``.</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Instantitates ``EmbeddingFeatures`` from a ``DatasetSchema``.</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -318,24 +242,36 @@
 <span class="sd">        Optional[EmbeddingFeatures]</span>
 <span class="sd">            Returns the ``EmbeddingFeatures`` for the dataset schema</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># TODO: propogate item-id from ITEM_ID tag</span>
+        <span class="c1"># TODO: propagate item-id from ITEM_ID tag</span>
 
         <span class="k">if</span> <span class="n">tags</span><span class="p">:</span>
             <span class="n">schema</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">select_by_tag</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">item_id</span> <span class="ow">and</span> <span class="n">schema</span><span class="o">.</span><span class="n">select_by_tag</span><span class="p">([</span><span class="s2">&quot;item_id&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">column_names</span><span class="p">:</span>
-            <span class="n">item_id</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">select_by_tag</span><span class="p">([</span><span class="s2">&quot;item_id&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">column_names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">_item_id</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">select_by_tag</span><span class="p">(</span><span class="n">Tags</span><span class="o">.</span><span class="n">ITEM_ID</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">item_id</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">_item_id</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">_item_id</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                    <span class="s2">&quot;Multiple columns with tag ITEM_ID found. &quot;</span>
+                    <span class="s2">&quot;Please specify the item_id column name.&quot;</span>
+                <span class="p">)</span>
+            <span class="n">item_id</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">_item_id</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">name</span>
+
+        <span class="n">embedding_dims</span> <span class="o">=</span> <span class="n">embedding_dims</span> <span class="ow">or</span> <span class="p">{}</span>
 
         <span class="k">if</span> <span class="n">infer_embedding_sizes</span><span class="p">:</span>
-            <span class="n">embedding_dims</span> <span class="o">=</span> <span class="n">get_embedding_sizes_from_schema</span><span class="p">(</span>
+            <span class="n">embedding_dims_infered</span> <span class="o">=</span> <span class="n">get_embedding_sizes_from_schema</span><span class="p">(</span>
                 <span class="n">schema</span><span class="p">,</span> <span class="n">infer_embedding_sizes_multiplier</span>
             <span class="p">)</span>
 
-        <span class="n">embedding_dims</span> <span class="o">=</span> <span class="n">embedding_dims</span> <span class="ow">or</span> <span class="p">{}</span>
+            <span class="n">embedding_dims</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="o">**</span><span class="n">embedding_dims</span><span class="p">,</span>
+                <span class="o">**</span><span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">embedding_dims_infered</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">embedding_dims</span><span class="p">},</span>
+            <span class="p">}</span>
+
         <span class="n">embeddings_initializers</span> <span class="o">=</span> <span class="n">embeddings_initializers</span> <span class="ow">or</span> <span class="p">{}</span>
 
         <span class="n">emb_config</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">cardinalities</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">categorical_cardinalities</span><span class="p">()</span>
+        <span class="n">cardinalities</span> <span class="o">=</span> <span class="n">categorical_cardinalities</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">cardinality</span> <span class="ow">in</span> <span class="n">cardinalities</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="n">embedding_size</span> <span class="o">=</span> <span class="n">embedding_dims</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">embedding_dim_default</span><span class="p">)</span>
             <span class="n">embedding_initializer</span> <span class="o">=</span> <span class="n">embeddings_initializers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
@@ -420,7 +356,7 @@
     <span class="n">embedding_features_parameters</span><span class="o">=</span><span class="n">EMBEDDING_FEATURES_PARAMS_DOCSTRING</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="k">class</span> <span class="nc">SoftEmbeddingFeatures</span><span class="p">(</span><span class="n">EmbeddingFeatures</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Encapsulate continuous features encoded using the Soft-one hot encoding</span>
 <span class="sd">    embedding technique (SoftEmbedding),    from https://arxiv.org/pdf/1708.00065.pdf</span>
 <span class="sd">    In a nutshell, it keeps an embedding table for each continuous feature,</span>
@@ -443,6 +379,7 @@
         <span class="n">pre</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TabularTransformationType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">post</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TabularTransformationType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">aggregation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TabularAggregationType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwarg</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="k">if</span> <span class="n">layer_norm</span><span class="p">:</span>
             <span class="kn">from</span> <span class="nn">transformers4rec.torch</span> <span class="kn">import</span> <span class="n">TabularLayerNorm</span>
@@ -462,12 +399,12 @@
         <span class="n">embeddings_initializers</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">Any</span><span class="p">],</span> <span class="kc">None</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">layer_norm</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">combiner</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mean&quot;</span><span class="p">,</span>
-        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">Tag</span><span class="p">,</span> <span class="nb">list</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TagsType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">automatic_build</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">max_sequence_length</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Optional</span><span class="p">[</span><span class="s2">&quot;SoftEmbeddingFeatures&quot;</span><span class="p">]:</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Instantitates ``SoftEmbeddingFeatures`` from a ``DatasetSchema``.</span>
 
 <span class="sd">        Parameters</span>
@@ -501,7 +438,7 @@
 <span class="sd">        Optional[SoftEmbeddingFeatures]</span>
 <span class="sd">            Returns a ``SoftEmbeddingFeatures`` instance from the dataset schema</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># TODO: propogate item-id from ITEM_ID tag</span>
+        <span class="c1"># TODO: propagate item-id from ITEM_ID tag</span>
 
         <span class="k">if</span> <span class="n">tags</span><span class="p">:</span>
             <span class="n">schema</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">select_by_tag</span><span class="p">(</span><span class="n">tags</span><span class="p">)</span>
@@ -511,7 +448,7 @@
         <span class="n">embeddings_initializers</span> <span class="o">=</span> <span class="n">embeddings_initializers</span> <span class="ow">or</span> <span class="p">{}</span>
 
         <span class="n">sizes</span> <span class="o">=</span> <span class="p">{}</span>
-        <span class="n">cardinalities</span> <span class="o">=</span> <span class="n">schema</span><span class="o">.</span><span class="n">categorical_cardinalities</span><span class="p">()</span>
+        <span class="n">cardinalities</span> <span class="o">=</span> <span class="n">categorical_cardinalities</span><span class="p">(</span><span class="n">schema</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">col_name</span> <span class="ow">in</span> <span class="n">schema</span><span class="o">.</span><span class="n">column_names</span><span class="p">:</span>
             <span class="c1"># If this is NOT a categorical feature</span>
             <span class="k">if</span> <span class="n">col_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cardinalities</span><span class="p">:</span>
@@ -572,7 +509,7 @@
         <span class="k">if</span> <span class="n">combiner</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;mean&quot;</span><span class="p">,</span> <span class="s2">&quot;sum&quot;</span><span class="p">,</span> <span class="s2">&quot;sqrtn&quot;</span><span class="p">):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Invalid combiner </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">combiner</span><span class="p">))</span>
 
-        <span class="k">if</span> <span class="p">(</span><span class="n">initializer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">callable</span><span class="p">(</span><span class="n">initializer</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">initializer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="nb">callable</span><span class="p">(</span><span class="n">initializer</span><span class="p">)):</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;initializer must be callable if specified.&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">initializer</span><span class="p">:</span> <span class="n">Callable</span><span class="p">[[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">],</span> <span class="kc">None</span><span class="p">]</span>
@@ -616,13 +553,13 @@
 
 
 <div class="viewcode-block" id="SoftEmbedding"><a class="viewcode-back" href="../../../../api/transformers4rec.torch.features.html#transformers4rec.torch.SoftEmbedding">[docs]</a><span class="k">class</span> <span class="nc">SoftEmbedding</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Soft-one hot encoding embedding technique, from https://arxiv.org/pdf/1708.00065.pdf</span>
 <span class="sd">    In a nutshell, it represents a continuous feature as a weighted average of embeddings</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_embeddings</span><span class="p">,</span> <span class="n">embeddings_dim</span><span class="p">,</span> <span class="n">emb_initializer</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -655,49 +592,94 @@
         <span class="n">soft_one_hot_embeddings</span> <span class="o">=</span> <span class="p">(</span><span class="n">weights</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">embedding_table</span><span class="o">.</span><span class="n">weight</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">soft_one_hot_embeddings</span></div></div>
+
+
+<div class="viewcode-block" id="PretrainedEmbeddingsInitializer"><a class="viewcode-back" href="../../../../api/transformers4rec.torch.features.html#transformers4rec.torch.PretrainedEmbeddingsInitializer">[docs]</a><span class="k">class</span> <span class="nc">PretrainedEmbeddingsInitializer</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Initializer of embedding tables with pre-trained weights</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    weight_matrix : Union[torch.Tensor, List[List[float]]]</span>
+<span class="sd">        A 2D torch or numpy tensor or lists of lists with the pre-trained</span>
+<span class="sd">        weights for embeddings. The expect dims are</span>
+<span class="sd">        (embedding_cardinality, embedding_dim). The embedding_cardinality</span>
+<span class="sd">        can be inferred from the column schema, for example,</span>
+<span class="sd">        `schema.select_by_name(&quot;item_id&quot;).feature[0].int_domain.max + 1`.</span>
+<span class="sd">        The first position of the embedding table is reserved for padded</span>
+<span class="sd">        items (id=0).</span>
+<span class="sd">    trainable : bool</span>
+<span class="sd">        Whether the embedding table should be trainable or not</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+        <span class="bp">self</span><span class="p">,</span>
+        <span class="n">weight_matrix</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">float</span><span class="p">]]],</span>
+        <span class="n">trainable</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
+    <span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="c1"># The weight matrix is kept in CPU, but when forward() is called</span>
+        <span class="c1"># to initialize the embedding table weight will be copied to</span>
+        <span class="c1"># the embedding table device (e.g. cuda)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weight_matrix</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">tensor</span><span class="p">(</span><span class="n">weight_matrix</span><span class="p">,</span> <span class="n">device</span><span class="o">=</span><span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">trainable</span> <span class="o">=</span> <span class="n">trainable</span>
+
+<div class="viewcode-block" id="PretrainedEmbeddingsInitializer.forward"><a class="viewcode-back" href="../../../../api/transformers4rec.torch.features.html#transformers4rec.torch.PretrainedEmbeddingsInitializer.forward">[docs]</a>    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">):</span>
+        <span class="k">with</span> <span class="n">torch</span><span class="o">.</span><span class="n">no_grad</span><span class="p">():</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">copy_</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">weight_matrix</span><span class="p">)</span>
+        <span class="n">x</span><span class="o">.</span><span class="n">requires_grad</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">trainable</span></div></div>
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, NVIDIA.
-
-    </p>
+    <p>&#169; Copyright 2021, NVIDIA.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
   
-
-  <script type="text/javascript">
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: main
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Branches</dt>
+      <dd><a href="embedding.html">main</a></dd>
+    </dl>
+  </div>
+</div><script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVJ1Y1YJHK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  
-  
-    
-   
+      gtag('config', 'G-NVJ1Y1YJHK', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>

@@ -1,69 +1,45 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>transformers4rec.torch.features.tabular &mdash; Transformers4Rec  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>transformers4rec.torch.features.tabular &mdash; Transformers4Rec  documentation</title><link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/togglebutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/custom.css" type="text/css" />
+    <link rel="canonical" href="https://nvidia-merlin.github.io/Transformers4Rec/main/_modules/transformers4rec/torch/features/tabular.html" />
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+  <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
         <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/doctools.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-
-    
+        <script >let toggleHintShow = 'Click to show';</script>
+        <script >let toggleHintHide = 'Click to hide';</script>
+        <script >let toggleOpenOnPrint = 'true';</script>
+        <script src="../../../../_static/togglebutton.js"></script>
+        <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
+  <div class="banner">
+    <p class="banner">
+      Beginning in January 2023, versions for all NVIDIA Merlin projects
+      will change from semantic versioning like <code>4.0</code>
+      to calendar versioning like <code>23.01</code>.</p>
+  </div>
 
-   
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../../../index.html" class="icon icon-home"> Transformers4Rec
-          
-
-          
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -71,97 +47,44 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Contents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html">Transformers4Rec | Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#highlights">Highlights</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#quick-tour">Quick tour</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#use-cases">Use cases</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../README.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../why_transformers4rec.html">Why Transformers4Rec?</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../model_definition.html">Model Architectures</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../training_eval.html">Training and Evaluation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">End-to-end pipeline with NVIDIA Merlin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../examples/index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../pipeline.html">End-to-End Pipeline with Hugging Face Transformers and NVIDIA Merlin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../multi_gpu_train.html">Multi-GPU data-parallel training using the <code class="docutils literal notranslate"><span class="pre">Trainer</span></code> class</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/index.html">Example Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../api/modules.html">API Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../resources.html">Additional Resources</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../../index.html">Transformers4Rec</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../../../index.html">Module code</a> &raquo;</li>
-        
       <li>transformers4rec.torch.features.tabular</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for transformers4rec.torch.features.tabular</h1><div class="highlight"><pre>
 <span></span><span class="c1">#</span>
 <span class="c1"># Copyright (c) 2021, NVIDIA CORPORATION.</span>
@@ -181,9 +104,10 @@
 
 <span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Type</span><span class="p">,</span> <span class="n">Union</span>
 
-<span class="kn">from</span> <span class="nn">merlin_standard_lib</span> <span class="kn">import</span> <span class="n">Schema</span><span class="p">,</span> <span class="n">Tag</span>
-<span class="kn">from</span> <span class="nn">merlin_standard_lib.schema.tag</span> <span class="kn">import</span> <span class="n">TagsType</span>
-<span class="kn">from</span> <span class="nn">merlin_standard_lib.utils.doc_utils</span> <span class="kn">import</span> <span class="n">docstring_parameter</span>
+<span class="kn">from</span> <span class="nn">merlin.models.utils.doc_utils</span> <span class="kn">import</span> <span class="n">docstring_parameter</span>
+<span class="kn">from</span> <span class="nn">merlin.schema</span> <span class="kn">import</span> <span class="n">Tags</span><span class="p">,</span> <span class="n">TagsType</span>
+
+<span class="kn">from</span> <span class="nn">merlin_standard_lib</span> <span class="kn">import</span> <span class="n">Schema</span>
 
 <span class="kn">from</span> <span class="nn">..block.base</span> <span class="kn">import</span> <span class="n">SequentialBlock</span>
 <span class="kn">from</span> <span class="nn">..block.mlp</span> <span class="kn">import</span> <span class="n">MLPBlock</span>
@@ -214,7 +138,7 @@
     <span class="n">tabular_features_parameters</span><span class="o">=</span><span class="n">TABULAR_FEATURES_PARAMS_DOCSTRING</span><span class="p">,</span>
 <span class="p">)</span>
 <span class="k">class</span> <span class="nc">TabularFeatures</span><span class="p">(</span><span class="n">MergeTabular</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Input module that combines different types of features: continuous, categorical &amp; text.</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Input module that combines different types of features: continuous, categorical &amp; text.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -235,6 +159,7 @@
         <span class="n">post</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TabularTransformationType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">aggregation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TabularAggregationType</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">schema</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Schema</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">):</span>
         <span class="n">to_merge</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="k">if</span> <span class="n">continuous_module</span><span class="p">:</span>
@@ -246,13 +171,13 @@
 
         <span class="k">assert</span> <span class="n">to_merge</span> <span class="o">!=</span> <span class="p">{},</span> <span class="s2">&quot;Please provide at least one input layer&quot;</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">TabularFeatures</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-            <span class="n">to_merge</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="n">pre</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="n">post</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregation</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span>
+            <span class="n">to_merge</span><span class="p">,</span> <span class="n">pre</span><span class="o">=</span><span class="n">pre</span><span class="p">,</span> <span class="n">post</span><span class="o">=</span><span class="n">post</span><span class="p">,</span> <span class="n">aggregation</span><span class="o">=</span><span class="n">aggregation</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
         <span class="p">)</span>
 
 <div class="viewcode-block" id="TabularFeatures.project_continuous_features"><a class="viewcode-back" href="../../../../api/transformers4rec.torch.features.html#transformers4rec.torch.TabularFeatures.project_continuous_features">[docs]</a>    <span class="k">def</span> <span class="nf">project_continuous_features</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span> <span class="n">mlp_layers_dims</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">int</span><span class="p">]</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;TabularFeatures&quot;</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Combine all concatenated continuous features with stacked MLP layers</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Combine all concatenated continuous features with stacked MLP layers</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
@@ -282,8 +207,8 @@
     <span class="k">def</span> <span class="nf">from_schema</span><span class="p">(</span>  <span class="c1"># type: ignore</span>
         <span class="bp">cls</span><span class="p">,</span>
         <span class="n">schema</span><span class="p">:</span> <span class="n">Schema</span><span class="p">,</span>
-        <span class="n">continuous_tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">TagsType</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tag</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Tag</span><span class="o">.</span><span class="n">CONTINUOUS</span><span class="p">,),</span>
-        <span class="n">categorical_tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">TagsType</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tag</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Tag</span><span class="o">.</span><span class="n">CATEGORICAL</span><span class="p">,),</span>
+        <span class="n">continuous_tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">TagsType</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tags</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Tags</span><span class="o">.</span><span class="n">CONTINUOUS</span><span class="p">,),</span>
+        <span class="n">categorical_tags</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">TagsType</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="n">Tags</span><span class="p">]]]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Tags</span><span class="o">.</span><span class="n">CATEGORICAL</span><span class="p">,),</span>
         <span class="n">aggregation</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
         <span class="n">automatic_build</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
         <span class="n">max_sequence_length</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
@@ -291,16 +216,16 @@
         <span class="n">continuous_soft_embeddings</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
         <span class="o">**</span><span class="n">kwargs</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;TabularFeatures&quot;</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot;Instantiates ``TabularFeatures`` from a ``DatasetSchema``</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;Instantiates ``TabularFeatures`` from a ``DatasetSchema``</span>
 
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        schema : DatasetSchema</span>
 <span class="sd">            Dataset schema</span>
-<span class="sd">        continuous_tags : Optional[Union[DefaultTags, list, str]], optional</span>
-<span class="sd">            Tags to filter the continuous features, by default Tag.CONTINUOUS</span>
-<span class="sd">        categorical_tags : Optional[Union[DefaultTags, list, str]], optional</span>
-<span class="sd">            Tags to filter the categorical features, by default Tag.CATEGORICAL</span>
+<span class="sd">        continuous_tags : Optional[Union[TagsType, Tuple[Tags]]], optional</span>
+<span class="sd">            Tags to filter the continuous features, by default Tags.CONTINUOUS</span>
+<span class="sd">        categorical_tags : Optional[Union[TagsType, Tuple[Tags]]], optional</span>
+<span class="sd">            Tags to filter the categorical features, by default Tags.CATEGORICAL</span>
 <span class="sd">        aggregation : Optional[str], optional</span>
 <span class="sd">            Feature aggregation option, by default None</span>
 <span class="sd">        automatic_build : bool, optional</span>
@@ -329,7 +254,7 @@
                 <span class="p">)</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">maybe_continuous_module</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">CONTINUOUS_MODULE_CLASS</span><span class="o">.</span><span class="n">from_schema</span><span class="p">(</span>
-                    <span class="n">schema</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">continuous_tags</span>
+                    <span class="n">schema</span><span class="p">,</span> <span class="n">tags</span><span class="o">=</span><span class="n">continuous_tags</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span>
                 <span class="p">)</span>
         <span class="k">if</span> <span class="n">categorical_tags</span><span class="p">:</span>
             <span class="n">maybe_categorical_module</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">EMBEDDING_MODULE_CLASS</span><span class="o">.</span><span class="n">from_schema</span><span class="p">(</span>
@@ -385,46 +310,54 @@
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2021, NVIDIA.
-
-    </p>
+    <p>&#169; Copyright 2021, NVIDIA.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
   
-
-  <script type="text/javascript">
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: main
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Branches</dt>
+      <dd><a href="tabular.html">main</a></dd>
+    </dl>
+  </div>
+</div><script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NVJ1Y1YJHK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  
-  
-    
-   
+      gtag('config', 'G-NVJ1Y1YJHK', {
+          'anonymize_ip': false,
+      });
+    </script> 
 
 </body>
 </html>
